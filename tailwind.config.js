@@ -13,6 +13,7 @@ module.exports = {
         text: "#222222",
         text_gray: "#d3dce6",
         color_date: "#95a7a9",
+        text_desc: "#737d7f",
       },
     },
   },

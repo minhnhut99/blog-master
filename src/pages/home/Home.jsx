@@ -1,10 +1,64 @@
 import React from "react";
+import BlockBreak from "../../components/common/block_break/BlockBreak";
+import Footer from "../../components/common/footer/Footer";
 import Header from "../../components/common/header/Header";
 import Hero from "../../components/common/hero/Hero";
-import Footer from "../../components/common/footer/Footer";
-import BlockBreak from "../../components/common/block_break/BlockBreak";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import PostItem from "../../_share/post_item/PostItem";
+import ReadMore from "../../_share/read_more/ReadMore";
+import TitleSubMenu from "../../_share/title_sub_menu/TitleSubMenu";
 const Home = () => {
+  const dataPost = [
+    {
+      image:
+        "https://images.unsplash.com/photo-1621602412501-69e1b0e4b8fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByZXR0eSUyMGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      alt: "alt1",
+      address_path: "Tu Su",
+      date: "31/12/2022",
+      title_heading: "Mot chieu mua",
+      desc_text:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1621602412501-69e1b0e4b8fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByZXR0eSUyMGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      alt: "alt1",
+      address_path: "Tu Su",
+      date: "31/12/2022",
+      title_heading: "Mot chieu mua",
+      desc_text:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien",
+    },
+    {
+      image:
+        "https://images.unsplash.com/photo-1621602412501-69e1b0e4b8fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByZXR0eSUyMGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+      alt: "alt1",
+      address_path: "Tu Su",
+      date: "31/12/2022",
+      title_heading: "Mot chieu mua",
+      desc_text:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien",
+    },
+    // {
+    //   image:
+    //     "https://images.unsplash.com/photo-1621602412501-69e1b0e4b8fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByZXR0eSUyMGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    //   alt: "alt1",
+    //   address_path: "Tu Su",
+    //   date: "31/12/2022",
+    //   title_heading: "Mot chieu mua",
+    //   desc_text:
+    //     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien",
+    // },
+    // {
+    //   image:
+    //     "https://images.unsplash.com/photo-1621602412501-69e1b0e4b8fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHByZXR0eSUyMGdpcmxzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    //   alt: "alt1",
+    //   address_path: "Tu Su",
+    //   date: "31/12/2022",
+    //   title_heading: "Mot chieu mua",
+    //   desc_text:
+    //     "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien",
+    // },
+  ];
   return (
     <React.Fragment>
       <section className="w-full h-full  bg-slate-50 px-20 mx-auto">
@@ -16,39 +70,49 @@ const Home = () => {
         <div className="px-5">
           {/* tu su  */}
           <div>
-            <div className="relative">
-              <h2 className="text-5xl my-10 py-1 font-bold text-title ">
-                Tự sự
-              </h2>
-              <div className="w-14 h-1 rounded absolute bg-bd_color_primary top-full"></div>
+            <TitleSubMenu title="Tự sự" />
+            <div className="flex flex-wrap w-full overflow-hidden relative">
+              {dataPost.map((post, idx) => {
+                return (
+                  <PostItem
+                    key={idx}
+                    image={post.image}
+                    alt={post.alt}
+                    address_path={post.address_path}
+                    date={post.date}
+                    title_heading={post.title_heading}
+                    desc_text={post.desc_text}
+                  />
+                );
+              })}
             </div>
-            <div className="flex flex-wrap w-full overflow-hidden">
-              <figure className="w-[calc(33.33%_-_25px)] mr-5 flex flex-col relative shadow-md bg-white rounded-md overflow-hidden">
-                <img
-                  className="bg-cover w-full h-80"
-                  src="https://images.unsplash.com/photo-1576341592370-3151269da47e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dGhpbmtwYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-                <div className="pl-2">
-                  <div className="pt-4">
-                    <div className="style-text-date">Tu Su - 18/11/2022</div>
-                  </div>
-                  <h4 className="mt-2 font-medium text-sub_title text-xl">
-                    Vội vàng em đến và rồi đi
-                  </h4>
-                  <p className="mt-2 capitalize">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Ipsum ab dolore sequi autem, facilis eligendi minus
-                    architecto explicabo minima ratione. Quos repellendus
-                    assumenda voluptatum asperiores, nostrum sint reprehenderit
-                    quae id.
-                  </p>
-                </div>
-                <button className="absolute right-0 bottom-0 bg">
-                  <IoIosArrowRoundForward color="#000000" size={45} />
-                </button>
-              </figure>
+            <ReadMore />
+          </div>
+          <BlockBreak />
+          {/* Am nhac  */}
+          <div>
+            <TitleSubMenu title="Âm nhạc" />
+            <div className="flex flex-wrap w-full overflow-hidden relative">
+              {dataPost.map((post, idx) => {
+                return (
+                  <PostItem
+                    key={idx}
+                    image={post.image}
+                    alt={post.alt}
+                    address_path={post.address_path}
+                    date={post.date}
+                    title_heading={post.title_heading}
+                    desc_text={post.desc_text}
+                  />
+                );
+              })}
             </div>
+            <ReadMore />
+          </div>
+          <BlockBreak />
+
+          <div>
+            <TitleSubMenu title="Hình ảnh" />
           </div>
           <Footer />
         </div>
