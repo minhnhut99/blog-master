@@ -16,7 +16,7 @@ const PostItem = ({
         <div className="pt-4">
           <div className="style-text-date items-center flex">
             {address_path}
-            <span className="block ml-1 mr-1 rounded-1/2 w-1 h-1 bg-color_date"></span>
+            <span className="block ml-1 mr-1 rounded-1/2 w-1 h-full  bg-color_date"></span>
             {date}
           </div>
         </div>

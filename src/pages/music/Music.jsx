@@ -1,9 +1,9 @@
 import React from "react";
 import BlockBreak from "../../components/common/block_break/BlockBreak";
-import Music from "../music/Music";
-import Photo from "../photo/Photo";
-import Storries from "../storries/Storries";
-const Home = () => {
+import PostItem from "../../_share/post_item/PostItem";
+import ReadMore from "../../_share/read_more/ReadMore";
+import TitleSubMenu from "../../_share/title_sub_menu/TitleSubMenu";
+const Music = () => {
   const dataPost = [
     {
       image:
@@ -57,17 +57,29 @@ const Home = () => {
     // },
   ];
   return (
-    <React.Fragment>
-      <BlockBreak />
-      <div className="px-5">
-        {/* tu su  */}
-        <Storries />
-        {/* Am nhac  */}
-        <Music />
-        <Photo />
+    <>
+      <div>
+        <TitleSubMenu title="Âm nhạc" />
+        <div className="flex flex-wrap w-full overflow-hidden relative">
+          {dataPost.map((post, idx) => {
+            return (
+              <PostItem
+                key={idx}
+                image={post.image}
+                alt={post.alt}
+                address_path={post.address_path}
+                date={post.date}
+                title_heading={post.title_heading}
+                desc_text={post.desc_text}
+              />
+            );
+          })}
+        </div>
+        <ReadMore />
       </div>
-    </React.Fragment>
+      <BlockBreak />
+    </>
   );
 };
 
-export default Home;
+export default Music;

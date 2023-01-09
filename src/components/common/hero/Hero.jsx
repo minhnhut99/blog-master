@@ -5,9 +5,8 @@ const Hero = () => {
     <div>
       <div className="flex h-auto w-full pt-24">
         <div className="w-2/3 h-fit">
-          <p className="text-9xl">Mưu cầu</p>
-          <p className="text-9xl ml-44 mt-12">hạnh phúc</p>
-          <p className="ml-auto">Nhut Huynh</p>
+          <p className="text-9xl">Viva</p>
+          <p className="text-9xl ml-44 mt-12">la Vida</p>
         </div>
         <div className="w-1/3 h-fit">
           <img
